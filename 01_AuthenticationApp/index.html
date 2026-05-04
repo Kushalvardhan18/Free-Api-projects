@@ -19,24 +19,30 @@
           Login
         </h4>
 
-        <form class="flex flex-col gap-4">
+        <form
+          method="POST"
+          class="flex flex-col gap-4"
+        >
           <input
             type="text"
             placeholder="Username"
-            class="rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
+            name="username"
+            class="username rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
           />
 
           <input
             type="password"
+            name="password"
             placeholder="Password"
-            class="rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
+            class="password rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
           />
 
           <button
-            class="bg-blue-500 hover:bg-blue-600 transition py-3 rounded-lg font-semibold"
+            class="logIn bg-blue-500 hover:bg-blue-600 transition py-3 rounded-lg font-semibold"
           >
-            Login
-          </button>
+          Login
+        </button>
+        <p class="error text-red-500 text-sm"></p>
         </form>
 
         <div class="flex items-center my-6">
@@ -46,7 +52,7 @@
         </div>
 
         <button
-          class="w-full border border-gray-500 hover:bg-gray-700 transition py-3 rounded-lg font-semibold"
+          class="register w-full border border-gray-500 hover:bg-gray-700 transition py-3 rounded-lg font-semibold"
         >
           Register New User
         </button>
@@ -56,5 +62,6 @@
         © 2026 Authentication App by Kushal Vardhan
       </p>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
