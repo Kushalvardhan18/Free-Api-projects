@@ -1,16 +1,45 @@
-# React + Vite
+# 🛍️ Random Products App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple web application that displays random products with a clean and responsive UI.
 
-Currently, two official plugins are available:
+🔗 Live Demo: http://random-products-henna.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎲 Displays random products dynamically  
+- 📦 Clean product card layout  
+- 📱 Fully responsive design (mobile + desktop)  
+- ⚡ Fast and lightweight UI  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Purpose
+
+This project is built to showcase random product listings in a simple and interactive way, useful for demos, practice projects, or inspiration-based browsing.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React Js
+- **Styling:** CSS / Tailwind CSS 
+- **Deployment:** Vercel
+
+---
+
+## 🚀 Getting Started (Local Setup)
+
+```bash
+# Clone the repository
+git clone https://github.com/Kushalvardhan18/Free-Api-projects/tree/main/02_RandomUsersUI
+
+# Move into the project folder
+cd 02_RandomUsersUI
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
