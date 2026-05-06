@@ -1,16 +1,23 @@
-# React + Vite
+# YouTube Video Listing App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple web application that displays a list of YouTube videos in a clean UI.  
+It is  built using React js and deployed on Vercel.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Video listing interface
+- YouTube-style UI layout
+- Responsive design for mobile and desktop
+- Fetches and displays video data dynamically
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+- React js
+- Vercel 
 
-## React Compiler
+## 🌐 Live Demo
+https://youtube-video-listing-app.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Deployment
+[Vercel](https://youtube-video-listing-app.vercel.app/)
 
-## Expanding the ESLint configuration
+[Github](https://github.com/Kushalvardhan18/Free-Api-projects/tree/main/07_YoutubeVideoListingUI)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
