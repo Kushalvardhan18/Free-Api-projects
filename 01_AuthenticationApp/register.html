@@ -1,63 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Register User</title>
-  </head>
-  <body
-    class="flex items-center justify-center min-h-screen bg-gray-100 bg-gray-900"
-  >
-    <div class="w-full max-w-md border p-5">
-      <h1
-        class="text-center font-bold text-4xl sm:text-3xl font-mono mb-10 text-white"
-      >
-        Register User
-      </h1>
-      <form
-        action="https://api.freeapi.app/api/v1/users/register"
-        method="POST"
-        class="flex flex-col gap-4"
-      >
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          class="email rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
-        />
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          class="password rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <select
-          id="role"
-          name="role"
-          class="rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <option value="">SelectRole</option>
-          <option value="ADMIN">ADMIN</option>
-          <option value="USER">USER</option>
-        </select>
-        <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          class="username rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <button
-          type="submit"
-          class="registerNewUser text-white bg-blue-500 hover:bg-blue-600 transition py-3 rounded-lg font-semibold"
-        >
-          Register
-        </button>
-        <p class="error text-red-500 text-sm"></p>
-      </form>
-    </div>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-    <script src="register.js"></script>
-  </body>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center px-4">
+
+  <div class="w-full max-w-md bg-gray-800 p-8 rounded-2xl shadow-xl">
+
+    <h1 class="text-3xl font-bold text-center mb-8 font-mono">
+      Register User
+    </h1>
+
+    <form id="registerForm" class="flex flex-col gap-4">
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required
+        class="p-3 rounded-lg text-black"
+      />
+
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        required
+        class="p-3 rounded-lg text-black"
+      />
+
+      <select
+        name="role"
+        required
+        class="p-3 rounded-lg text-black"
+      >
+        <option value="">Select Role</option>
+        <option value="ADMIN">ADMIN</option>
+        <option value="USER">USER</option>
+      </select>
+
+      <input
+        type="text"
+        name="username"
+        placeholder="Username"
+        required
+        class="p-3 rounded-lg text-black"
+      />
+
+      <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-600 transition py-3 rounded-lg font-semibold"
+      >
+        Register
+      </button>
+
+      <p class="error text-red-500 text-sm"></p>
+      <p class="success text-green-500 text-sm"></p>
+
+    </form>
+
+  </div>
+
+  <script src="register.js"></script>
+</body>
 </html>

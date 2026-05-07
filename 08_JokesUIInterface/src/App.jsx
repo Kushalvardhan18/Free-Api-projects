@@ -31,7 +31,7 @@ function App() {
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10 px-4">
       
    
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">
+      <h1 className="text-3xl font-bold text-white mb-6">
         😂 Random Jokes
       </h1>
 
@@ -43,9 +43,9 @@ function App() {
           jokes.map((joke) => (
             <div
               key={joke.id}
-              className="bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition"
+              className="bg-white! p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition"
             >
-              <p className="text-gray-700">{joke.content}</p>
+              <p className="text-black bg-white!">{joke.content}</p>
             </div>
           ))
         )}

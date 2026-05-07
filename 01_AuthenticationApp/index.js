@@ -1,36 +1,61 @@
-const username = document.querySelector('.username')
-const password = document.querySelector('.password')
-const logInBtn = document.querySelector('.logIn')
-const errorText = document.querySelector('.error');
-const register = document.querySelector('.register')
-logInBtn.addEventListener('click', handleLogIn)
+const form = document.getElementById("loginForm");
 
-async function handleLogIn(e) {
-    e.preventDefault()
-    const url = "https://api.freeapi.app/api/v1/users/login"
-    const options = {
-        method: 'POST',
-        headers: { accept: 'application/json', 'content-type': 'application/json' },
-        body: JSON.stringify({ "password": password.value, "username": username.value })
-    };
-    if (!username.value || !password.value) {
-        errorText.textContent = "All fields are required";
-        return;
+const username = document.querySelector(".username");
+const password = document.querySelector(".password");
+
+const errorText = document.querySelector(".error");
+const successText = document.querySelector(".success");
+
+const registerBtn = document.getElementById("registerBtn");
+
+form.addEventListener("submit", handleLogin);
+
+async function handleLogin(e) {
+  e.preventDefault();
+
+  errorText.textContent = "";
+  successText.textContent = "";
+
+  if (!username.value || !password.value) {
+    errorText.textContent = "All fields are required";
+    return;
+  }
+
+  try {
+    const response = await fetch(
+      "https://api.freeapi.app/api/v1/users/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          accept: "application/json",
+        },
+        body: JSON.stringify({
+          username: username.value,
+          password: password.value,
+        }),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message || "Login failed");
     }
-    try {
-        const response = await fetch(url, options);
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
-        console.error(error);
-    }
+
+    localStorage.setItem("token", data.data.accessToken);
+
+    successText.textContent = "Login successful";
+
+    setTimeout(() => {
+      window.location.href = "dashboard.html";
+    }, 1000);
+
+  } catch (error) {
+    errorText.textContent = error.message;
+  }
 }
 
-register.addEventListener('click',()=>{
-    window.location.href = "register.html"
-})
-
-
-
-
-
+registerBtn.addEventListener("click", () => {
+  window.location.href = "register.html";
+});

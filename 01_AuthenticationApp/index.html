@@ -1,67 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Authentication App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body
-    class="bg-gray-900 text-white min-h-screen flex items-center justify-center px-4"
-  >
-    <div class="w-full max-w-md">
-      <h1 class="text-center font-bold text-4xl sm:text-5xl font-mono mb-10">
-        Authentication App
-      </h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
 
-      <div class="bg-gray-800 rounded-2xl shadow-xl px-6 sm:px-8 py-8">
-        <h4 class="text-2xl sm:text-3xl font-semibold text-center mb-6">
-          Login
-        </h4>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-        <form
-          method="POST"
-          class="flex flex-col gap-4"
-        >
-          <input
-            type="text"
-            placeholder="Username"
-            name="username"
-            class="username rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
-          />
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center px-4">
 
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            class="password rounded-lg p-3 text-black outline-none focus:ring-2 focus:ring-blue-500"
-          />
+  <div class="w-full max-w-md">
 
-          <button
-            class="logIn bg-blue-500 hover:bg-blue-600 transition py-3 rounded-lg font-semibold"
-          >
-          Login
-        </button>
-        <p class="error text-red-500 text-sm"></p>
-        </form>
+    <h1 class="text-center text-4xl font-bold font-mono mb-8">
+      Authentication App
+    </h1>
 
-        <div class="flex items-center my-6">
-          <div class="flex-1 h-px bg-gray-600"></div>
-          <span class="px-3 text-sm text-gray-400">OR</span>
-          <div class="flex-1 h-px bg-gray-600"></div>
-        </div>
+    <div class="bg-gray-800 p-8 rounded-2xl shadow-xl">
+
+      <h2 class="text-3xl font-semibold text-center mb-6">
+        Login
+      </h2>
+
+      <form id="loginForm" class="flex flex-col gap-4">
+
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          required
+          class="username p-3 rounded-lg text-black outline-none"
+        />
+
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          class="password p-3 rounded-lg text-black outline-none"
+        />
 
         <button
-          class="register w-full border border-gray-500 hover:bg-gray-700 transition py-3 rounded-lg font-semibold"
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-600 transition py-3 rounded-lg font-semibold"
         >
-          Register New User
+          Login
         </button>
+
+        <p class="error text-red-500 text-sm"></p>
+        <p class="success text-green-500 text-sm"></p>
+
+      </form>
+
+      <div class="flex items-center my-6">
+        <div class="flex-1 h-px bg-gray-600"></div>
+        <span class="px-3 text-gray-400 text-sm">OR</span>
+        <div class="flex-1 h-px bg-gray-600"></div>
       </div>
 
-      <p class="text-center text-gray-400 text-sm mt-6">
-        © 2026 Authentication App by Kushal Vardhan
-      </p>
+      <button
+        id="registerBtn"
+        class="w-full border border-gray-500 hover:bg-gray-700 transition py-3 rounded-lg font-semibold"
+      >
+        Register New User
+      </button>
+
     </div>
-    <script src="index.js"></script>
-  </body>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
 </html>
